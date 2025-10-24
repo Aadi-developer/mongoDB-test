@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "../frontend"))); // serve frontend folder
 
 // MongoDB connection
-mongoose.connect("mongodb://127.0.0.1:27017/aadiWebsiteDB", {
+mongoose.connect("mongodb://127.0.0.1:27017/MongoDatabase", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(()=> console.log("✅ MongoDB Connected"))
@@ -45,3 +45,4 @@ app.post("/submit", async (req, res)=>{
 
 // Start server
 app.listen(PORT, ()=> console.log(`Server running on http://localhost:${PORT}`));
+
